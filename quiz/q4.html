@@ -1,0 +1,75 @@
+<html>
+<head>
+  <link  rel="stylesheet" href="q1.css" type="text/css" media="all" />
+  <style>
+
+
+.alert.green {
+ color: green;
+}
+
+.alert.red {
+ color: red;
+}
+
+.fortiny {
+  width: 60%;
+  height: 40px !important;
+}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="col-sm-12 radiobutton">
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                          <b><p class="question">2. The users who are responsible for developing  application?</br>
+                          program or user interfaces</p></b>
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        <label>DB administrator</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        <label>online users</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <label>application programers</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <label>naive users</label>
+                                    </div>
+
+                    </div>
+                </div>
+                <form method="get" action="q5.html">
+                    <button type="submit">Next</button>
+                </form>
+                <script>
+                $(document).ready(function(){
+                  $('input[name=optionsRadios]').change(function(){
+                     $('.alert').remove();
+                    if($('input[name=optionsRadios]:checked').val() === "option3") {
+                      $(this).parent().append('<span class="alert green">&#10004 Correct Answer</span>');
+                    } else {
+                      $(this).parent().append('<span class="alert red">&#10006 Wrong Answer</span>');
+                    }
+                  });
+                });
+                </script>
+              </body>
+</html>

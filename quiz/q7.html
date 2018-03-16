@@ -1,0 +1,76 @@
+<html>
+<head>
+  <link  rel="stylesheet" href="q1.css" type="text/css" media="all" />
+  <style>
+
+
+.alert.green {
+ color: green;
+}
+
+.alert.red {
+ color: red;
+}
+
+.fortiny {
+  width: 60%;
+  height: 40px !important;
+}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="col-sm-12 radiobutton">
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                        <b> <p class="question">5. 	Which one of the following statement about HTTP is false?
+                          </b></p>
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        <label>	It can be used to test the validity of a hypertext links</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        <label>	It allows information to be stored in a URL</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <label>It runs over TCP protocol</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                                        <label>It describes the structure of web pages
+ </label>
+                                    </div>
+
+                    </div>
+                </div>
+                <form method="get" action="q8.html">
+                    <button type="submit">Next</button>
+                </form>
+                <script>
+                $(document).ready(function(){
+                  $('input[name=optionsRadios]').change(function(){
+                     $('.alert').remove();
+                    if($('input[name=optionsRadios]:checked').val() === "option4") {
+                      $(this).parent().append('<span class="alert green">&#10004 Correct Answer</span>');
+                    } else {
+                      $(this).parent().append('<span class="alert red">&#10006 Wrong Answer</span>');
+                    }
+                  });
+                });
+                </script>
+              </body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+  <link  rel="stylesheet" href="q1.css" type="text/css" media="all" />
+  <style>
+
+
+.alert.green {
+ color: green;
+}
+
+.alert.red {
+ color: red;
+}
+
+.fortiny {
+  width: 60%;
+  height: 40px !important;
+}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="col-sm-12 radiobutton">
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                        <b> <p class="question">6. 	The relation R that has x number of tuples is joined with relation S that has y number of tuples. </br>
+                          The maximum and minimum sizes of join respectively are....
+                          </b></p>
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        <label>		xy and x + y</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        <label>		x + y and I x - yI</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <label>xy and 0</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <label>x + y and 0
+ </label>
+                                    </div>
+
+                    </div>
+                </div>
+                <form method="get" action="q9.html">
+                    <button type="submit">Next</button>
+                </form>
+                <script>
+                $(document).ready(function(){
+                  $('input[name=optionsRadios]').change(function(){
+                     $('.alert').remove();
+                    if($('input[name=optionsRadios]:checked').val() === "option3") {
+                      $(this).parent().append('<span class="alert green">&#10004 Correct Answer</span>');
+                    } else {
+                      $(this).parent().append('<span class="alert red">&#10006 Wrong Answer</span>');
+                    }
+                  });
+                });
+                </script>
+              </body>
+</html>

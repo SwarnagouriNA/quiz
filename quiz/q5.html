@@ -1,0 +1,82 @@
+<html>
+<head>
+  <link  rel="stylesheet" href="q1.css" type="text/css" media="all" />
+  <style>
+
+
+.alert.green {
+ color: green;
+}
+
+.alert.red {
+ color: red;
+}
+
+.fortiny {
+  width: 60%;
+  height: 40px !important;
+}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="col-sm-12 radiobutton">
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                          <b><p class="question">3. For the C program given below the statement that does not hold true is
+                          </br>
+                            for (i = 0; ifor(j = 0; jif (i%c)</br>
+  {</br>
+  x += (4*j+5*i);</br>
+  y+=(7+4*j);</br>
+}</br>
+}</br>
+}</p></b>
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        <label>There is a scope strength reduction</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        <label>There is a scope of dead code elimination </label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <label>There is a scope of common sub-expression elimination</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <label>None of the above </label>
+                                    </div>
+
+                    </div>
+                </div>
+                <form method="get" action="q6.html">
+                    <button type="submit">Next</button>
+                </form>
+                <script>
+                $(document).ready(function(){
+                  $('input[name=optionsRadios]').change(function(){
+                     $('.alert').remove();
+                    if($('input[name=optionsRadios]:checked').val() === "option2") {
+                      $(this).parent().append('<span class="alert green">&#10004 Correct Answer</span>');
+                    } else {
+                      $(this).parent().append('<span class="alert red">&#10006 Wrong Answer</span>');
+                    }
+                  });
+                });
+                </script>
+              </body>
+</html>

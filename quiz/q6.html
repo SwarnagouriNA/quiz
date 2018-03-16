@@ -1,0 +1,76 @@
+<html>
+<head>
+  <link  rel="stylesheet" href="q1.css" type="text/css" media="all" />
+  <style>
+
+
+.alert.green {
+ color: green;
+}
+
+.alert.red {
+ color: red;
+}
+
+.fortiny {
+  width: 60%;
+  height: 40px !important;
+}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="col-sm-12 radiobutton">
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                        <b> <p class="question">4. Which one of the following statement is false for
+                          </br>the SLR (1) and LALR (1) parsing tables for a context free grammar?</b></p>
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        <label>	The reduce entries in both the tables may be different</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        <label>The error entries in both the tables may be different </label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <label>The go to part of both tables may be different</label>
+                                    </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="radio radio-replace color-green">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <label>	The shift entries in both the tables may be identical
+ </label>
+                                    </div>
+
+                    </div>
+                </div>
+                <form method="get" action="q7.html">
+                    <button type="submit">Next</button>
+                </form>
+                <script>
+                $(document).ready(function(){
+                  $('input[name=optionsRadios]').change(function(){
+                     $('.alert').remove();
+                    if($('input[name=optionsRadios]:checked').val() === "option3") {
+                      $(this).parent().append('<span class="alert green">&#10004 Correct Answer</span>');
+                    } else {
+                      $(this).parent().append('<span class="alert red">&#10006 Wrong Answer</span>');
+                    }
+                  });
+                });
+                </script>
+              </body>
+</html>
